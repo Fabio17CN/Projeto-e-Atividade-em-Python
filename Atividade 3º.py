@@ -3,7 +3,7 @@ from os import system
 from time import sleep                        # biblioteca de system 
 
 
-Senha_Atual = 192
+Senha_Atual = 1994
 comando = True
 
 while (comando != True):
