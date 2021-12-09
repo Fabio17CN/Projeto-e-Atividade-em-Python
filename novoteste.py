@@ -1,10 +1,10 @@
 
 # desenha o propior nome no tutle
-import turtle
+import turtle           
 
 
 num = True
-while num == True:
+while num == True:                      # usando while pra fica rodado o progrma
     
     pen = turtle.Turtle()
     def ring(col, rad):
