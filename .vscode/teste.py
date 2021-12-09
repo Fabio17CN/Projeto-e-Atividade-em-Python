@@ -14,7 +14,7 @@ def ring(col, rad):
   
     # Start filling the color
     pen.begin_fill()
-  
+
     # Draw a circle
     pen.circle(rad)
   
