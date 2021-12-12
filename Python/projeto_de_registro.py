@@ -1,18 +1,21 @@
 
-from os import  system
+from os import system
 from time import sleep
 
 apagar_tela = 'cls'  # ou clear
 alunos = {}
+lista = ['', 'Python', 'JavaScript', 'Java', 'Programação C', 'Arduino']
+
 print('Registro de alunos do curso de Python')
 print('Prof: Everton Batman ')
 print('-='*50)
 
 while True:
+
     print('''
      Menu:
      
-     1 - Ver a lista de alunos matriculados.
+     1 - Ver a lista de alunos matriculado.
      2 - Adicionar um aluno a lista.
      3 - Ver registro do curso de um aluno. 
      4 - Sair''')
@@ -28,20 +31,22 @@ while True:
             system(apagar_tela)
 
         else:
-
+            system(apagar_tela)
             print('Lista de alunos: ')
+
             for nome, cursos in alunos.items():
-                if(alunos != alunos):
-                    print(f'{nome} - {cursos} cursos')
+                if(cursos >= 1) and (cursos <= 5):
+                    curso = lista[cursos]
+                    print(f'{nome} Matriculado em {cursos}º {curso}')
+                    print('-----------------------------------------')
+
                 else:
                     system(apagar_tela)
-                    del(alunos[1:4])
-                    print(alunos)
-                    print('Cursos não existe !')
-
+                    del(nome, cursos)
+                    print('...Não existe ex_alunos!..')
                     for x in range(5):
                         sleep(1)
-                system(apagar_tela)
+                    system(apagar_tela)
 
     elif(opcao == "2"):
         system(apagar_tela)
@@ -54,30 +59,29 @@ while True:
         4 - Programação C
         5 - Aduino ''')
 
-        nome = str(input('\nInsira o  nome: '))
+        print('----------------------------------------------')
+        nome = str(input('\nInsira o seu nome: '))
         cursos = int(input('Insira o numero do curso: '))
         alunos[nome] = cursos
         system(apagar_tela)
 
     elif(opcao == "3"):
         system(apagar_tela)
-        nome = str(input('\nInsira o nome: '))
+        nome = str(input('\nInsira o seu nome: '))
         if nome in alunos:
 
-            if(cursos >= 1) and (cursos <= 5):
-                system('cls')
-                print('\n{} Esta matriculado !'.format(nome))
-                print(f'Cursos: {alunos[nome]} Python')
-                for x in range(5):
-                    sleep(1)
-                system(apagar_tela)
-
-            else:
-                print('...Cursos não existe !...')
+            system('cls')
+            print('\n{} Esta matriculado !'.format(nome))
+            curso = lista[cursos]
+            print(f'Cursos: {alunos[nome]}º {curso}')
+            for x in range(5):
+                sleep(1)
+            system(apagar_tela)
 
         else:
             print(f'Não existe aluno com esse nome: {nome}')
-
+            sleep(5)
+            system(apagar_tela)
     elif(opcao == "4"):
         system(apagar_tela)
         print('...Saindo do System...'.center(65))
