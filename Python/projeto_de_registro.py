@@ -2,7 +2,7 @@
 from os import system
 from time import sleep
 
-apagar_tela = 'cls'  # ou clear
+apagar_tela = 'cls'  # ou clear vai deperender da sua maquina
 alunos = {}
 lista = ['', 'Python', 'JavaScript', 'Java', 'Programação C', 'Arduino']
 
@@ -42,11 +42,11 @@ while True:
 
                 else:
                     system(apagar_tela)
-                    del(nome, cursos)
+                    del (nome, cursos)
                     print('...Não existe ex_alunos!..')
-                    for x in range(5):
-                        sleep(1)
+                    sleep(2)
                     system(apagar_tela)
+                    break
 
     elif(opcao == "2"):
         system(apagar_tela)

@@ -1,0 +1,80 @@
+body {
+    background: url('https://i.pinimg.com/originals/b9/53/62/b95362536f5dda6eb38d5ebcd7b4c81d.jpg');
+    background-position: center center;
+    background-size: cover;
+    font-family: Tahoma;
+}
+
+h1 {
+    color: rgba(255, 255, 255, 0.945);
+    text-align: center;
+    font-size: 71px;
+    letter-spacing: 10px;
+}
+
+#del-countdown {
+    width: 850px;
+    margin: auto;
+    margin-top: 10%;
+}
+
+#clock span {
+    float: left;
+    text-align: center;
+    font-size: 84px;
+    margin: 0 2.1%;
+    color: #fff;
+    padding: 20px;
+    width: 20%;
+    border-radius: 25px;
+    box-sizing: border-box;
+}
+
+#clock span:nth-child(1) {
+    background: #860160;
+}
+
+#clock span:nth-child(2) {
+    background: #333;
+}
+
+#clock span:nth-child(3) {
+    background: #860160;
+}
+
+#clock span:nth-child(4) {
+    background: #333;
+}
+
+#clock:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#units span {
+    float: left;
+    width: 25%;
+    text-align: center;
+    margin-top: 30px;
+    color: #ddd;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 1px 1px rgba(10, 10, 10, 0.7);
+}
+
+span.turn {
+    animation: turn 0.5s ease forwards;
+}
+
+@keyframes turn {
+    0% {
+        transform: rotatex(0deg)
+    }
+
+    100% {
+        transform: rotatex(360deg)
+    }
+
+}
